@@ -1,0 +1,33 @@
+1.code to open an image,print its shape and the convert into grayscale
+
+
+import numpy as np
+import cv2
+# Load an color image in grayscale
+img=cv2.imread('download.jpg')
+cv2.imshow('image',img)
+img1=cv2.imread('download.jpg',0)
+cv2.imshow ('g',img1)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+print(img.shape)
+print(img[:,:,0])
+
+
+-----------------------------------------------------------------------------------------
+2.Write a code to apply mean filter.
+
+
+
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+img = cv2.imread ('chromelogo.jpg')
+blur = cv2.blur(img,(40,40))
+plt.subplot(121),plt.imshow(img),plt.title('Original')
+plt.xticks([]),plt.yticks([])
+plt.subplot(122),plt.imshow(blur),plt.title('Blurred')
+plt.xticks([]),plt.yticks([])
+plt.show()
+
+
